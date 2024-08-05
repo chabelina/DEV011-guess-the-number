@@ -5,6 +5,9 @@ public class HumanPlayer extends Player {
     public int makeGuess() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Player 1, enter your guess: ");
-        return scanner.nextInt();
+        int guess = scanner.nextInt();
+        scanner.close();
+        guesses.add(guess);
+        return guess;
     }
 }
