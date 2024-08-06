@@ -106,7 +106,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ![Diagrama de Clases](https://firebasestorage.googleapis.com/v0/b/laboratoria-945ea.appspot.com/o/class-diagram.png?alt=media)
 
-#### `GuessTheNumberGame`
+#### `mygame.GuessTheNumberGame`
 
 **Propósito:**
 Maneja la lógica principal, decide qué jugador asume el próximo turno.
@@ -119,10 +119,10 @@ Maneja la lógica principal, decide qué jugador asume el próximo turno.
 **Métodos estáticos (`static`):**
 
 - `main(String[] args)`: Inicia el juego y genera el número aleatorio.
-- `checkGuess(Player player)`: Ejecuta un turno, obtiene la suposición
+- `checkGuess(mygame.Player player)`: Ejecuta un turno, obtiene la suposición
   y evalúa el nuevo estado de la partida.
 
-#### `Player`
+#### `mygame.Player`
 
 **Propósito:**
 Representa a una jugadora genérica. Es una clase abstracta.
@@ -139,20 +139,20 @@ Define los atributos y métodos que todas las _clases_ de jugadoras deben compar
 - `getName()`: Devuelve el nombre de la jugadora.
 - `getGuesses()`: Devuelve el historial de suposiciones de la jugadora.
 
-#### `HumanPlayer` y `ComputerPlayer` (heredan de `Player`)
+#### `mygame.HumanPlayer` y `ComputerPlayer` (heredan de `mygame.Player`)
 
 **Propósito:**
 Representa a las jugadoras _Humana_ y _Computadora_, respectivamente.
 
 **Métodos:**
 
-- `makeGuess()`: Método que cada clase que hereda de `Player` debe implementar.
+- `makeGuess()`: Método que cada clase que hereda de `mygame.Player` debe implementar.
 
 **Relaciones:**
 
-- La clase `GuessTheNumberGame` interactúa con las clases `HumanPlayer`
+- La clase `mygame.GuessTheNumberGame` interactúa con las clases `mygame.HumanPlayer`
   y `ComputerPlayer` para gestionar el juego.
-- Tanto la clase `HumanPlayer` como `Computer Player` son subclases de `Player`,
+- Tanto la clase `mygame.HumanPlayer` como `Computer mygame.Player` son subclases de `mygame.Player`,
   lo que implica que heredan todas sus propiedades y métodos,
   pero también tienen algunas características adicionales propias.
 
