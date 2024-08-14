@@ -20,6 +20,11 @@ public class GuessTheNumberGame {
             {
                 System.out.println("Congrats! You guessed the number.");
             } else {
+                int length = player1.guesses.size();
+                int latestGuess = player1.guesses.get(length - 1);
+                if (latestGuess < targetNumber){
+                    System.out.println("Too low!");
+                } else System.out.println("Too high!");
                 System.out.println("Try again.");
             }
         }
@@ -28,6 +33,7 @@ public class GuessTheNumberGame {
     private static boolean checkGuess(Player player)
     {
         int guess = player.makeGuess();
+        player.guesses.add(guess);
         return guess == targetNumber;
     }
 }
