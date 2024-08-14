@@ -1,9 +1,15 @@
 package mygame;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class HumanPlayer extends Player {
+
+    public HumanPlayer() {
+        super();
+    }
+
     @Override
     public int makeGuess() {
         Scanner scanner = new Scanner(System.in);
@@ -22,7 +28,6 @@ public class HumanPlayer extends Player {
                 scanner.next();
             }
         }
-
         return guess;
     }
 }

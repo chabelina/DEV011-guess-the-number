@@ -6,6 +6,11 @@ abstract public class Player {
     private String name;
     protected ArrayList<Integer> guesses;
 
+    public Player() {
+        this.name = "";
+        this.guesses = new ArrayList<>();
+    }
+
     public abstract int makeGuess();
 
     public String getName() {
